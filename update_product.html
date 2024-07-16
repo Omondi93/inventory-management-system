@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Update Product</h2>
+    <form method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" value="{{ product.name }}" required>
+        
+        <label for="category">Category</label>
+        <input type="text" id="category" name="category" value="{{ product.category }}" required>
+        
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" value="{{ product.quantity }}" required>
+        
+        <label for="price">Price</label>
+        <input type="number" step="0.01" id="price" name="price" value="{{ product.price }}" required>
+        
+        <label for="low_stock_threshold">Low Stock Threshold</label>
+        <input type="number" id="low_stock_threshold" name="low_stock_threshold" value="{{ product.low_stock_threshold }}" required>
+        
+        <button type="submit">Update Product</button>
+    </form>
+{% endblock %}

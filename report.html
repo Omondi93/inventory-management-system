@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Inventory Report</h2>
+    <ul>
+        <li>Total Products: {{ report.total_products }}</li>
+        <li>Total Inventory Value: {{ report.total_inventory_value }}</li>
+        <li>Low Stock Products: {{ report.low_stock_products_count }}</li>
+        <li>Report Generated At: {{ report.report_generated_at }}</li>
+    </ul>
+{% endblock %}
